@@ -10,9 +10,8 @@ builder.Services.AddHttpClient<IWialonService, WialonService>(client =>
 });
 builder.Services.AddSingleton<List<string>>(_ => new List<string>
 {
-    "Kan2_LL-0478", "Kan1_LL-5494", "TM_PF-2732",
-    "Kan1_LC-7860", "Mat1_42-0590", "Mat1_42-7944",
-    "Mat2_42-0367", "Mat2_41-6956"
+    // Add your vehicle numbers here
+ 
 });
 builder.Services.AddSignalR();
 
