@@ -10,7 +10,7 @@ namespace CEBVehicleTracker.Services
     public class WialonService : IWialonService
     {
         private readonly HttpClient _httpClient;
-        private const string BaseUrl = "https://hst-api.wialon.com/wialon/ajax.html";
+        private const string BaseUrl = "";
 
         public WialonService(HttpClient httpClient)
         {
@@ -24,7 +24,7 @@ namespace CEBVehicleTracker.Services
         {
             if (string.IsNullOrEmpty(_sid) || DateTime.Now > _sidExpiry)
             {
-                var token = "631332c3397a858d6bd9ab6949009d84693F00788581CE7D4E51FDC2C46AF8D007F20610";
+                var token = //"Add your token here";
                 var requestUrl = $"{BaseUrl}?svc=token/login&params={{\"token\":\"{token}\"}}";
                 Console.WriteLine($"Login request URL: {requestUrl}");
                 var response = await _httpClient.PostAsync(requestUrl, null);
